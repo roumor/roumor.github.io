@@ -44,17 +44,17 @@ function getData(e) {
 
 function createCard({ name, secondName, email }) {
     return `
-        <div class="user-outer">
+        <div data-out=${email} class="user-outer">
             <div class="user-info">
                 <p>${name}</p>
                 <p>${secondName}</p>
                 <p>${email}</p>
             </div>
             <div class="menu">
-                <button class="delete">Удалить</button>
-                <button class="change">Применить</button>
+                <button data-delete=${email} class="delete">Удалить</button>
+                <button data-change=${email} class="change">Применить</button>
             </div>
-        </div>
+        </divd>
     `
 }
 
@@ -102,10 +102,16 @@ function rerenderCard(storage) {
 function setListeners() {
     const del = document.querySelectorAll('.delete')
     const change = document.querySelectorAll('.change')
+    let clicked
 
     del.forEach(n => {
         n.addEventListener('click', () => {
             console.log('УДАЛИТЬ кнопка')
+            console.log(n)
+            clicked = n.getAttribute('data-delete')
+
+            const outer = document.querySelector(`[data-out="${clicked}"]`)
+            console.log('=== outer', outer)
         })
     })
 
@@ -114,6 +120,8 @@ function setListeners() {
             console.log('ПРИМЕНИТЬ кнопка')
         })
     })
+
+    const byDataAttr = document.querySelector(`[data-price="50"]`)
 }
 
 function clearLocalStorage() {
