@@ -1,5 +1,3 @@
-/*styles*/
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -25,6 +23,11 @@ form {
     width: 50vw;
 }
 
+input {
+    display: block;
+    height: 30px;
+}
+
 input:not(:last-child) {
     margin-bottom: 10px;
 }
@@ -35,6 +38,12 @@ input:not(:last-child) {
     border: none;
     outline: 1px solid green;
     border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.clear {
+    outline: 1px solid red;
+    width: 50vw;
 }
 
 .mainUsers {
@@ -44,8 +53,14 @@ input:not(:last-child) {
 }
 
 .users {
-    background-color: #f5f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 40vw;
-    height: auto;
 }
 
+.user {
+    background-color: #f5f1f1;
+    width: 40vw;
+    margin-bottom: 10px;
+}
