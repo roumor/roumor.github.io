@@ -79,8 +79,8 @@ function rerenderCard(storage) {
     /*
     Object.etries переводит объект в массив
     Object.etries(storage) ===>>>> [
-            [email1: {name: '', secondName: '', email: ''}],
-            [email2: {name: '', secondName: '', email: ''}]
+            ['email1', {name: '', secondName: '', email: ''}],
+            ['email2', {name: '', secondName: '', email: ''}]
         ]
      */
 
