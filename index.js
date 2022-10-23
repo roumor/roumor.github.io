@@ -12,6 +12,7 @@ const observer = new MutationObserver(mutations => {
     mutations.forEach(mutation => {
         if (mutation.addedNodes.length || mutation.removedNodes.length) {
             console.log("Карта USERS обновилась")
+            setListeners()
         }
     })
 })
@@ -95,6 +96,23 @@ function rerenderCard(storage) {
         div.className = 'user'
         div.innerHTML = createCard(userData)
         users.append(div)
+    })
+}
+
+function setListeners() {
+    const del = document.querySelectorAll('.delete')
+    const change = document.querySelectorAll('.change')
+
+    del.forEach(n => {
+        n.addEventListener('click', () => {
+            console.log('УДАЛИТЬ кнопка')
+        })
+    })
+
+    change.forEach(n => {
+        n.addEventListener('click', () => {
+            console.log('ПРИМЕНИТЬ кнопка')
+        })
     })
 }
 
