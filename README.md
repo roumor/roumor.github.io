@@ -1,4 +1,4 @@
-# Форма+
+# Form Plus
 
 ## Теория
 - Изучите [DOM MutationObserver](https://habr.com/ru/post/202366/) (*Можно найти кейс для использования*). 
