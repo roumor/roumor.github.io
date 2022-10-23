@@ -57,11 +57,38 @@ function createCard({ name, secondName, email }) {
     `
 }
 
-function rerenderCard(s) {
+function rerenderCard(storage) {
     users.innerHTML = ''
 
-    Object.entries(s).forEach(user => {
+    /*
+    storage имеет структуру
+    storage = {
+        email1: {
+            name: '',
+            secondName: '',
+            email: ''
+        },
+        email2: {
+            name: '',
+            secondName: '',
+            email: '',
+        }
+    }
+     */
+
+    /*
+    Object.etries переводит объект в массив
+    Object.etries(storage) ===>>>> [
+            [email1: {name: '', secondName: '', email: ''}],
+            [email2: {name: '', secondName: '', email: ''}]
+        ]
+     */
+
+    Object.entries(storage).forEach(user => {
         const [email, userData] = user
+        console.log("USER  === ", user)
+        console.log("EMAIL === ", email)
+        console.log("DATA  === ", userData)
 
         const div = document.createElement('div')
         div.className = 'user'
