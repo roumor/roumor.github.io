@@ -64,3 +64,55 @@ input:not(:last-child) {
     width: 40vw;
     margin-bottom: 10px;
 }
+
+.user-outer {
+    display: flex;
+    justify-content: space-between;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.delete,
+.change {
+    border: none;
+    height: 40%;
+    color: white;
+    padding: 0 10px;
+    border-radius: 10px;
+    display: none;
+}
+
+.delete {
+    background: red;
+}
+
+.change {
+    background: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

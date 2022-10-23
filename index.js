@@ -6,23 +6,19 @@ let name = document.querySelector('#name'),
     clear = document.querySelector('.clear')
 
 // Объект для localStorage
-let storage = {}
+let storage = JSON.parse(localStorage.getItem('users')) || {}
 
-// TODO МОЖЕТ ПРИГОДИТЬСЯ
-/*
 const observer = new MutationObserver(mutations => {
     mutations.forEach(mutation => {
         if (mutation.addedNodes.length || mutation.removedNodes.length) {
-            // ваш код
+            console.log("Карта USERS обновилась")
         }
     })
 })
 
-const elem = document.querySelector('ЗДЕСЬ_КЛАСС_КОТОРЫЙ_ХОТИТЕ_ОТСЛЕДИТЬ')
-observer.observe(elem, {
+observer.observe(users, {
     childList: true
 })
- */
 
 btn.addEventListener('click', getData)
 clear.addEventListener('click', clearLocalStorage)
@@ -42,27 +38,29 @@ function getData(e) {
 
     rerenderCard(JSON.parse(localStorage.getItem('users')))
 
-    name.value = ''
-    secondName.value = ''
-    email.value = ''
-
     return data
 }
 
 function createCard({ name, secondName, email }) {
     return `
-        <div>
-            <p>${name}</p>
-            <p>${secondName}</p>
-            <p>${email}</p>
+        <div class="user-outer">
+            <div class="user-info">
+                <p>${name}</p>
+                <p>${secondName}</p>
+                <p>${email}</p>
+            </div>
+            <div class="menu">
+                <button class="delete">Удалить</button>
+                <button class="change">Применить</button>
+            </div>
         </div>
     `
 }
 
-function rerenderCard(storage) {
+function rerenderCard(s) {
     users.innerHTML = ''
 
-    Object.entries(storage).forEach(user => {
+    Object.entries(s).forEach(user => {
         const [email, userData] = user
 
         const div = document.createElement('div')
@@ -75,6 +73,14 @@ function rerenderCard(storage) {
 function clearLocalStorage() {
     window.location.reload()
     localStorage.removeItem('users')
+}
+
+function show(el) {
+    el.style.display = 'block'
+}
+
+function hide(el) {
+    el.style.display = 'none'
 }
 
 // После перезагрузки страницы подтягиваем данные из localStorage
