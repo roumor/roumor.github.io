@@ -10,6 +10,7 @@
 
 h1 {
     text-align: center;
+    margin: 15px 0;
 }
 
 main {
@@ -91,27 +92,3 @@ input:not(:last-child) {
 .change {
     background: green;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -107,7 +107,7 @@ function setListeners() {
     del.forEach(n => {
         n.addEventListener('click', () => {
             console.log('УДАЛИТЬ кнопка')
-            console.log(n)
+            console.log("=== NODE:", n)
             clicked = n.getAttribute('data-delete')
 
             const outer = document.querySelector(`[data-out="${clicked}"]`)
@@ -117,11 +117,9 @@ function setListeners() {
 
     change.forEach(n => {
         n.addEventListener('click', () => {
-            console.log('ПРИМЕНИТЬ кнопка')
+            console.log('=== ПРИМЕНИТЬ кнопка')
         })
     })
-
-    const byDataAttr = document.querySelector(`[data-price="50"]`)
 }
 
 function clearLocalStorage() {
@@ -139,22 +137,3 @@ function hide(el) {
 
 // После перезагрузки страницы подтягиваем данные из localStorage
 window.onload = rerenderCard(JSON.parse(localStorage.getItem('users')))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
