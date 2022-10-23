@@ -85,6 +85,7 @@ function rerenderCard(storage) {
      */
 
     Object.entries(storage).forEach(user => {
+        // user = ['email1', {name: '', secondName: '', email: ''}]
         const [email, userData] = user
         console.log("USER  === ", user)
         console.log("EMAIL === ", email)
