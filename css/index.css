@@ -1,0 +1,229 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Fira Code, Inter, Segoe UI, Helvetica, Arial;
+  background-color: rgb(30, 30, 30);
+}
+.container {
+  display: flex;
+}
+.header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.logo {
+  color: rgb(197, 200, 0);
+  text-align: left;
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  width: 100px;
+  height: 80px;
+  margin-right: 20px;
+  margin-top: 0;
+  padding: 0;
+  line-height: 0px;
+}
+.logo > h1 {
+  font-size: 60px;
+  line-height: 0px;
+}
+
+.navi {
+  width: 500px;
+  height: 100%;
+  margin-right: 20px;
+  text-align: right;
+  line-height: 80px;
+  font-weight: 500;
+}
+.links {
+  position: fixed;
+  left: 0;
+  top: 200px;
+  width: 50px;
+  height: 130px;
+  background-color: beige;
+  align-content: center;
+  align-items: center;
+}
+.links img {
+  margin-top: 15px;
+  margin-left: 3px;
+  width: 40px;
+  height: 40px;
+}
+.links img:hover {
+  width: 45px;
+  height: 45px;
+}
+.navi > span {
+  color: rgb(79, 184, 254);
+  font-size: 1em;
+  margin-right: 20px;
+  font-size: 12px;
+}
+.navi > span > a {
+  font-size: 14px;
+  color: rgb(120, 175, 24);
+
+  text-decoration: none;
+  margin-left: 10px;
+}
+.navi > span > a:hover {
+  color: red;
+}
+
+.descr {
+  background-color: beige;
+  margin: 0;
+}
+.content {
+  margin: 50px;
+  margin-left: 150px;
+
+  word-wrap: normal;
+}
+.greet {
+  margin-right: 200px;
+  color: rgb(197, 200, 0);
+}
+.greet > h1 {
+  margin: 0px;
+  line-height: 40px;
+  font-size: 60px;
+  font-weight: 500;
+  letter-spacing: -3px;
+}
+.greet h1:nth-child(4) {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.greet h1:nth-child(5) {
+  font-size: 60px;
+}
+.greet > p {
+  margin-top: 10px;
+  color: rgb(79, 184, 254);
+}
+.ukazatelvniz {
+  text-align: center;
+  color: rgb(197, 200, 0);
+}
+.obomne {
+  display: flex;
+}
+.obomne_text > h2 {
+  color: rgb(197, 200, 0);
+  font-size: 30px;
+}
+.obomne_text > p {
+  color: rgb(152, 220, 247);
+}
+
+.fotka {
+  flex-shrink: 0;
+  margin-top: 50px;
+
+  width: 200px;
+  height: 300px;
+  background-color: bisque;
+  background: url(../myphoto2.png) no-repeat;
+  background-size: cover;
+}
+
+.obomne_text {
+  margin-left: 20px;
+}
+
+.obomne > .ukazatelvniz {
+  margin-top: 35px;
+  margin-left: 20px;
+  font-size: 0.8em;
+  line-height: 10px;
+  color: rgb(149, 152, 3);
+}
+#navyki {
+  margin-top: 0px;
+  columns: 2;
+  color: rgb(120, 175, 24);
+  list-style-type: square;
+  font-size: 15px;
+  font-weight: 100;
+  justify-items: left;
+  display: block;
+  width: 250px;
+}
+#text_under_maintext {
+  color: rgb(172, 76, 30);
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 35px;
+}
+.kontakts {
+  width: 400px;
+  margin-top: 100px;
+}
+
+.kontakts > h2 {
+  color: rgb(197, 200, 0);
+  margin-bottom: 10px;
+  padding-left: 0px;
+  line-height: 30px;
+  font-size: 30px;
+  letter-spacing: -1px;
+  word-spacing: -10px;
+}
+
+.kontakts > ul {
+  margin-top: 00px;
+  justify-items: left;
+  list-style: none;
+  width: 400px;
+  color: rgb(79, 184, 254);
+}
+
+.kontakts > ul > li {
+  padding: 0;
+  margin: 3px;
+}
+.kontakts > ul > li > span {
+  color: rgb(120, 175, 24);
+}
+.kontakts a {
+  color: rgb(120, 175, 24);
+  text-underline-offset: 3px;
+}
+.kontakts a:hover {
+  color: red;
+}
+
+.proekts {
+  margin-top: 50px;
+}
+.proekts > h1 {
+  background-color: antiquewhite;
+  font-size: 50px;
+  width: 280px;
+  position: relative;
+  left: -30px;
+  line-height: 50px;
+}
+.proekts > h2 {
+  color: rgb(197, 200, 0);
+
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.proekts_content {
+  display: flex;
+}
+.proekts_content p {
+  margin-left: 15px;
+  margin-top: 0px;
+  word-spacing: -3px;
+  color: rgb(152, 220, 247);
+}
