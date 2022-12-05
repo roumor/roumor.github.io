@@ -54,7 +54,7 @@ function createCard({ name, secondName, email }) {
                 <button data-delete=${email} class="delete">Удалить</button>
                 <button data-change=${email} class="change">Применить</button>
             </div>
-        </divd>
+        </div>
     `
 }
 
