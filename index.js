@@ -30,7 +30,7 @@ clear.addEventListener("click", clearLocalStorage);
 function getData(e) {
   e.preventDefault();
   const data = {};
-  // check if email is empty
+
   if (email.value === "") {
     return;
   }
@@ -41,8 +41,8 @@ function getData(e) {
   data.pin = pin.value || "";
 
   const key = data.email;
-  storage[key] = data;
 
+  storage[key] = data;
   localStorage.setItem("users", JSON.stringify(storage));
 
   if (tochange && tochange !== key) {
@@ -51,8 +51,6 @@ function getData(e) {
   }
 
   rerenderCard(JSON.parse(localStorage.getItem("users")));
-
-  //return data;
 }
 
 function createCard({ name, secondName, email, credit, pin }) {
@@ -115,10 +113,8 @@ function rerenderCard(storage) {
 }
 
 function deleteCard(clicked) {
-  let ls = JSON.parse(localStorage.getItem("users"));
-  delete ls[clicked];
-  localStorage.setItem("users", JSON.stringify(ls));
-  window.location.reload();
+  delete storage[clicked]; //storage глобальный обьект!
+  localStorage.setItem("users", JSON.stringify(storage));
 }
 
 function setListeners() {
