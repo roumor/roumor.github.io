@@ -50,7 +50,7 @@ function getData(e) {
 
 function createCard({ name, secondName, email }) {
   return `
-        <div data-out=${email} class="user-outer">
+        <div data-out=${email} class="user-outer shadow-md">
             <div class="user-info">
                 <p>${name}</p>
                 <p>${secondName}</p>
@@ -99,7 +99,7 @@ function rerenderCard(storage) {
     console.log("DATA  === ", userData);
 
     const div = document.createElement("div");
-    div.className = "user";
+    div.className = "user shadow-md";
     div.innerHTML = createCard(userData);
     users.append(div);
   });

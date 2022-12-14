@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/index.css" />
     <script defer src="index.js"></script>
     <title>Super Form</title>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="container">
-        <h1 class="mainHeading">Elbrus Супер-Форма</h1>
-        <main>
-            <div class="form">
-                <form>
-                    <label for="name">Name</label>
-                    <input class="name" id="name" type="text">
+      <h1 class="mainHeading">Elbrus Супер-Форма</h1>
+      <main>
+        <div class="form shadow-md">
+          <form>
+            <label for="name">Name</label>
+            <input class="name" id="name" type="text" />
 
-                    <label for="secondName">Second name</label>
-                    <input class="secondName" id="secondName" type="text">
+            <label for="secondName">Second name</label>
+            <input class="secondName" id="secondName" type="text" />
 
-                    <label for="email">Email</label>
-                    <input required type="email" class="email" id="email">
-
-                    <button class="btn">Отправить</button>
-                </form>
-                <button class="btn clear">Очистить localStorage</button>
+            <label for="email">Email</label>
+            <input required type="email" class="email" id="email" />
+            <div class="container">
+              <button class="btn">Отправить</button>
             </div>
+          </form>
+          <div class="container">
+            <button class="btn clear">Очистить localStorage</button>
+          </div>
+        </div>
 
-            <div class="mainUsers">
-                Users
-                <div class="users"></div>
-            </div>
-        </main>
-
+        <div class="mainUsers">
+          <h2>Users</h2>
+          <div class="users"></div>
+        </div>
+      </main>
     </div>
-</body>
+  </body>
 </html>
