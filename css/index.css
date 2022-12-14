@@ -46,7 +46,8 @@ form {
   width: 400px;
   padding: 1rem;
   border-radius: 8px;
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  align-self: flex-start;
 }
 .form .container {
   text-align: center;
@@ -76,11 +77,25 @@ form label {
   padding-right: 1rem;
   line-height: 2rem;
   white-space: nowrap;
+  margin-top: 0.5rem;
+  border: none;
+  box-shadow: 1px 1px 1px 1px rgba(137, 137, 137, 0.8);
 }
 
+.btn:hover {
+  background: rgb(149, 234, 22);
+}
+.btn:active {
+  transform: scale(0.98);
+}
 .clear {
   background: rgb(247, 20, 20);
+  color: rgb(40, 40, 40);
   font-size: 0.8rem;
+  margin-top: 0;
+}
+.clear:hover {
+  background: rgb(224, 18, 18);
 }
 
 .mainUsers {
@@ -90,15 +105,15 @@ form label {
   max-width: max-content;
   text-align: center;
   min-width: 300px;
+  background-color: rgb(150, 57, 238);
+  border-radius: 8px;
 }
 .mainUsers h2 {
   color: #f5f1f1;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   margin-bottom: 1rem;
-}
-
-.users {
+  margin-top: 1rem;
 }
 
 .user {
@@ -133,14 +148,22 @@ form label {
   border-radius: 6px;
   font-size: 0.9rem;
   line-height: 0.9rem;
+  border: none;
+  box-shadow: 1px 1px 1px 1px rgba(137, 137, 137, 0.8);
 }
 
 .delete {
   background: rgb(247, 20, 20);
 }
+.delete:hover {
+  background: rgb(224, 18, 18);
+}
 
 .change {
   background: rgb(162, 254, 24);
+}
+.change:hover {
+  background: rgb(149, 234, 22);
 }
 
 .shadow-md {
