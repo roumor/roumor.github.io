@@ -138,16 +138,18 @@ form label {
 .menu {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  gap: 0.5rem;
 }
 
 .delete,
 .change {
-  height: 40%;
   padding: 0.2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   border-radius: 6px;
   font-size: 0.9rem;
-  line-height: 0.9rem;
+  line-height: 1rem;
   border: none;
   box-shadow: 1px 1px 1px 1px rgba(137, 137, 137, 0.8);
 }

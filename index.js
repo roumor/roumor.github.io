@@ -1,6 +1,8 @@
 let name = document.querySelector("#name"),
   secondName = document.querySelector("#secondName"),
   email = document.querySelector("#email"),
+  credit = document.querySelector("#creditCardNumber"),
+  pin = document.querySelector("#pinNumber"),
   btn = document.querySelector(".btn"),
   users = document.querySelector(".users"),
   clear = document.querySelector(".clear"),
@@ -32,6 +34,8 @@ function getData(e) {
   data.name = name.value || "";
   data.secondName = secondName.value || "";
   data.email = email.value || "";
+  data.credit = credit.value || "";
+  data.pin = pin.value || "";
 
   const key = data.email;
   storage[key] = data;
@@ -48,13 +52,15 @@ function getData(e) {
   //return data;
 }
 
-function createCard({ name, secondName, email }) {
+function createCard({ name, secondName, email, credit, pin }) {
   return `
         <div data-out=${email} class="user-outer shadow-md">
             <div class="user-info">
                 <p>${name}</p>
                 <p>${secondName}</p>
                 <p>${email}</p>
+                <p>${credit}</p>
+                <p>${pin}</p>
             </div>
             <div class="menu">
                 <button data-delete=${email} class="delete">Удалить</button>
