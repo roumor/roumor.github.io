@@ -30,7 +30,10 @@ clear.addEventListener("click", clearLocalStorage);
 function getData(e) {
   e.preventDefault();
   const data = {};
-
+  // check if email is empty
+  if (email.value === "") {
+    return;
+  }
   data.name = name.value || "";
   data.secondName = secondName.value || "";
   data.email = email.value || "";
