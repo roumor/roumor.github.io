@@ -6,7 +6,7 @@ let name = document.querySelector("#name"),
   btn = document.querySelector(".btn"),
   users = document.querySelector(".users"),
   clear = document.querySelector(".clear"),
-  tochange = "";
+  tochange = { email: "", card: "" };
 
 // Объект для localStorage
 let storage = JSON.parse(localStorage.getItem("users")) || {};
@@ -45,9 +45,10 @@ function getData(e) {
   storage[key] = data;
   localStorage.setItem("users", JSON.stringify(storage));
 
-  if (tochange && tochange !== key) {
-    deleteCard(tochange);
-    tochange = "";
+  if (tochange.email && tochange.email !== key) {
+    deleteCard(tochange.email);
+    tochange.email = "";
+    tochange.card = "";
   }
 
   rerenderCard(JSON.parse(localStorage.getItem("users")));
@@ -144,7 +145,13 @@ function setListeners() {
       name.value = ls[clicked].name;
       secondName.value = ls[clicked].secondName;
       email.value = ls[clicked].email;
-      tochange = clicked;
+      //это проверка, если какойто элемент уже выбран, тогда надо убрать с него стиль выделения
+      if (tochange.email) {
+        tochange.card.style.outline = "";
+      }
+      tochange.email = clicked;
+      tochange.card = n.parentElement.parentElement.parentElement;
+      tochange.card.style.outline = "#f5d72a solid 5px";
     });
   });
 }
